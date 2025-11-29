@@ -14,7 +14,7 @@ const usuarios = [
     { email: 'Mario', password: 'Mario' }
 ];
 
-// Ruta para validar login
+// validar login
 app.post('/api/login', (req, res) => {
     const { email, password } = req.body;
 
@@ -29,7 +29,7 @@ app.post('/api/login', (req, res) => {
     } else {
         res.status(401).json({ 
             success: false, 
-            message: 'Email o contraseña incorrectos' 
+            message: 'Usuario o password incorrectos ff' 
         });
     }
 });
