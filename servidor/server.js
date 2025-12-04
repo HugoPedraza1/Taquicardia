@@ -81,7 +81,7 @@ app.get('/api/ventas', (req, res) => {
 
 
 // OBTENER VENTAS DE HOY
-/
+
 app.get('/api/ventas/hoy', (req, res) => {
     const hoy = new Date().toLocaleDateString();
 
