@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Corte del Día</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+    <div class="logout-container">
+        <button id="logoutBtn" class="logoutBtn">Cerrar Sesión</button>
+    </div>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <h2 class="logo">TAQUICARDIA</h2>
+            <p class="subtitle">Punto de Venta</p>
+
+            <nav class="menu">
+                <button onclick="window.location.href='index.html'" class="menu-btn">Orden</button>
+                <button class="menu-btn active">Corte</button>
+                <button class="menu-btn">Ajustes</button>
+            </nav>
+        </aside>
+
+        <main class="main">
+
+            <h1 class="title">Corte del Día</h1>
+
+            <div class="dashboard">
+
+                <div class="card">
+                    <h3>Total del Día</h3>
+                    <p class="big-number">$<span id="totalDia">0</span></p>
+                </div>
+
+                <div class="card">
+                    <h3>Ventas Realizadas</h3>
+                    <p class="big-number" id="ventasDia">0</p>
+                </div>
+
+            </div>
+
+            <h2>Listado de Ventas</h2>
+
+            <table class="ventas-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Fecha</th>
+                        <th>Total Venta</th>
+                        <th>Ver Detalle</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaVentas"></tbody>
+            </table>
+
+            <button id="exportarExcel" class="calc-btn">Exportar a Excel</button>
+            <button id="exportarPDF" class="print-btn">Exportar a PDF</button>
+
+        </main>
+
+    </div>
+
+    <script src="/src/corte.js"></script>
+</body>
+</html>
