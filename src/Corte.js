@@ -1,6 +1,6 @@
-// ==============================
+
 // VALIDAR TOKEN
-// ==============================
+
 const token = localStorage.getItem("userToken");
 if (!token) {
     window.location.href = "/login.html";
@@ -11,17 +11,17 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
     window.location.href = "/login.html";
 });
 
-// ==============================
+
 // FORMATEAR FECHA BONITA
-// ==============================
+
 function formatearFecha(fecha) {
     const f = new Date(fecha);
     return f.toLocaleDateString() + " " + f.toLocaleTimeString();
 }
 
-// ==============================
+
 // CARGAR VENTAS DEL DÍA
-// ==============================
+
 async function cargarVentas() {
     const res = await fetch("http://localhost:3000/api/ventas/hoy");
     const ventas = await res.json();
@@ -52,9 +52,9 @@ async function cargarVentas() {
 
 cargarVentas();
 
-// ==============================
+
 // VER DETALLE DE UNA VENTA
-// ==============================
+
 function verDetalle(id) {
     fetch(`http://localhost:3000/api/venta/${id}`)
         .then(res => res.json())
@@ -78,9 +78,9 @@ function verDetalle(id) {
         .catch(() => alert("Error al obtener la venta."));
 }
 
-// ==============================
+
 // ELIMINAR VENTA
-// ==============================
+
 function eliminarVenta(id) {
     if (!confirm("¿Eliminar esta venta?")) return;
 
@@ -95,9 +95,9 @@ function eliminarVenta(id) {
         .catch(() => alert("Error al eliminar venta."));
 }
 
-// ==============================
+
 // EXPORTAR A EXCEL
-// ==============================
+
 document.getElementById("exportarExcel").addEventListener("click", () => {
     const tabla = document.getElementById("tablaVentas").innerHTML;
     const blob = new Blob([tabla], { type: "application/vnd.ms-excel" });
@@ -109,9 +109,9 @@ document.getElementById("exportarExcel").addEventListener("click", () => {
     a.click();
 });
 
-// ==============================
+
 // EXPORTAR PDF (Print)
-// ==============================
+
 document.getElementById("exportarPDF").addEventListener("click", () => {
     window.print();
 });
