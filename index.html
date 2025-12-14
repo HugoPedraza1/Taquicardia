@@ -1,99 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Taquicardia - Punto de Venta</title>
-    <link rel="stylesheet" href="/src/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Taquicardia - Punto de Venta</title>
+	<link rel="stylesheet" href="/src/style.css">
 </head>
+
 <body>
 
-    <div class="logout-container">
-        <button id="logoutBtn" class="logoutBtn">Cerrar Sesión</button>
-    </div>
+	<div class="logout-container">
+		<button id="logoutBtn" class="logoutBtn">Cerrar Sesión</button>
+	</div>
 
-    <div class="container">
+	<div class="container">
 
-        
-        <aside class="sidebar">
-            <h2 class="logo">TAQUICARDIA</h2>
-            <p class="subtitle">Punto de Venta</p>
 
-            <nav class="menu">
-                <button class="menu-btn active">Orden</button>
-                <button class="menu-btn" onclick="window.location.href='corte.html'">Corte</button>
-                <button class="menu-btn">Ajustes</button>
-            </nav>
-        </aside>
+		<aside class="sidebar">
+			<h2 class="logo">TAQUICARDIA</h2>
+			<p class="subtitle">Punto de Venta</p>
 
-        
-        <main class="main">
+			<nav class="menu">
+				<button class="menu-btn active">Orden</button>
+				<button class="menu-btn" onclick="window.location.href='corte.html'">Corte</button>
+				<button class="menu-btn">Ajustes</button>
+			</nav>
+		</aside>
 
-            <h1 class="title">Nueva Orden</h1>
 
-            
-            <div class="order-box">
+		<main class="main">
 
-                <div class="form-group">
-                    <label>Producto:</label>
-                    <select id="producto">
-                        <option value="Taco">Taco - $15</option>
-                        <option value="Quesadilla">Quesadilla - $35</option>
-                        <option value="Volcán">Volcán - $20</option>
-                        <option value="Refresco">Refresco - $20</option>
-                    </select>
-                </div>
+			<h1 class="title">Nueva Orden</h1>
 
-                <div class="form-group">
-                    <label>Relleno:</label>
-                    <select id="relleno">
-                        <option value="Pastor">Pastor</option>
-                        <option value="Bistec">Bistec</option>
-                        <option value="Chorizo">Chorizo</option>
-                        <option value="Tripa">Tripa</option>
-                        <option value="Costilla">Costilla</option>
-                    </select>
-                </div>
 
-                <div class="form-group">
-                    <label>Cantidad:</label>
-                    <input type="number" id="cantidad" min="1" value="1">
-                </div>
+			<div class="order-box">
 
-                <button id="agregarBtn" class="add-btn">Agregar</button>
-            </div>
+				<div class="form-group">
+					<label>Producto:</label>
+					<select id="producto">
+						<option value="Taco">Taco - $15</option>
+						<option value="Quesadilla">Quesadilla - $35</option>
+						<option value="Volcán">Volcán - $20</option>
+						<option value="Refresco">Refresco - $20</option>
+					</select>
+				</div>
 
-            <!-- ticket -->
-            <div class="ticket-box">
+				<div class="form-group">
+					<label>Relleno:</label>
+					<select id="relleno">
+						<option value="Pastor">Pastor</option>
+						<option value="Bistec">Bistec</option>
+						<option value="Chorizo">Chorizo</option>
+						<option value="Tripa">Tripa</option>
+						<option value="Costilla">Costilla</option>
+					</select>
+				</div>
 
-                <h2>Ticket</h2>
-                <div id="ticket"></div>
+				<div class="form-group">
+					<label>Cantidad:</label>
+					<input type="number" id="cantidad" min="1" value="1">
+				</div>
 
-                <hr>
+				<button id="agregarBtn" class="add-btn">Agregar</button>
+			</div>
 
-                <div class="total-section">
-                    <p>Total: $<span id="total">0</span></p>
-                </div>
+			<!-- ticket --> 
+			<div class="ticket-box">
 
-                <div class="form-group">
-                    <label>Pago del cliente:</label>
-                    <input type="number" id="pago" placeholder="Ingrese pago...">
-                </div>
+				<h2>Ticket</h2>
+				<div id="ticket"></div>
 
-                <button id="calcularBtn" class="calc-btn">Calcular Cambio</button>
+				<hr>
 
-                <p class="cambio">Cambio: $<span id="cambio">0</span></p>
+				<div class="total-section">
+					<p>Total: $<span id="total">0</span></p>
+				</div>
 
-                <div class="ticket-actions">
-                    <button id="nuevoBtn" class="new-btn">Nuevo Pedido</button>
-                    <button id="imprimirBtn" class="print-btn">Imprimir Ticket</button>
-                </div>
+				<div class="form-group">
+					<label>Pago del cliente:</label>
+					<input type="number" id="pago" placeholder="Ingrese pago...">
+				</div>
 
-            </div>
+				<button id="calcularBtn" class="calc-btn">Calcular Cambio</button>
 
-        </main>
-    </div>
+				<p class="cambio">Cambio: $<span id="cambio">0</span></p>
 
-    <script src="/src/main.js"></script>
+				<div class="ticket-actions">
+					<button id="nuevoBtn" class="new-btn">Nuevo Pedido</button>
+					<button id="imprimirBtn" class="print-btn">Imprimir Ticket</button>
+				</div>
+
+			</div>
+
+		</main>
+	</div>
+
+	<script src="/src/main.js"></script>
 </body>
+
 </html>
